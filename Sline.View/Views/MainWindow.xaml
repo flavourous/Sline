@@ -1,0 +1,24 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Sline.View.Views.MainWindow"
+        xmlns:local="clr-namespace:Sline.View.Views"
+        xmlns:vm="clr-namespace:Sline.ViewModel.ViewModels;assembly=Sline.ViewModel"
+        Title="MainWindow">
+  <StackPanel>
+    <TextBlock Text="SLINE" FontSize="24"/>
+    <TextBox Text="{Binding CurrentCommandText}"/>
+    <Button Command="{Binding ExecuteCurrentCommand}" HorizontalAlignment="Left">Run</Button>
+    <TextBlock>Result</TextBlock>
+    <ContentControl Content="{Binding Result}">
+      <ContentControl.DataTemplates>
+        <DataTemplate DataType="{x:Type vm:CommandResultViewModel}">
+          <TextBlock Text="{Binding Value, FallbackValue=HAI}"/>
+        </DataTemplate>
+      </ContentControl.DataTemplates>
+    </ContentControl>
+    <TextBlock Text="{Binding Error}"/>
+  </StackPanel>
+</Window>

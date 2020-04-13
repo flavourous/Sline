@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="0.9.0" />
+    <PackageReference Include="Avalonia.Desktop" Version="0.9.0" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="0.9.0" />
+    <PackageReference Include="Ninject" Version="3.3.4" />
+    <PackageReference Include="ninject.extensions.conventions" Version="3.3.0" />
+    <PackageReference Include="Splat.Ninject" Version="9.4.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sline.Model\Sline.Model.csproj" />
+  </ItemGroup>
+</Project>
